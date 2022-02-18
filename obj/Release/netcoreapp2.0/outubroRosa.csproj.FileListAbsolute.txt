@@ -1,0 +1,11 @@
+C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\bin\Release\netcoreapp2.0\outubroRosa.deps.json
+C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\bin\Release\netcoreapp2.0\outubroRosa.runtimeconfig.json
+C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\bin\Release\netcoreapp2.0\outubroRosa.runtimeconfig.dev.json
+C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\bin\Release\netcoreapp2.0\outubroRosa.dll
+C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\bin\Release\netcoreapp2.0\outubroRosa.pdb
+C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\obj\Release\netcoreapp2.0\outubroRosa.csprojResolveAssemblyReference.cache
+C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\obj\Release\netcoreapp2.0\outubroRosa.csproj.CoreCompileInputs.cache
+C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\obj\Release\netcoreapp2.0\outubroRosa.AssemblyInfoInputs.cache
+C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\obj\Release\netcoreapp2.0\outubroRosa.AssemblyInfo.cs
+C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\obj\Release\netcoreapp2.0\outubroRosa.dll
+C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\obj\Release\netcoreapp2.0\outubroRosa.pdb

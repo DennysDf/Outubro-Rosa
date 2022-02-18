@@ -1,0 +1,122 @@
+﻿
+@model outubroRosa.Models.Entidades.Participante
+
+@{
+    ViewData["Title"] = "Imprimir";
+    var tipo = Model.TipoProva.Equals("1") ? "Corrida - 5KM" : "Caminhada - 3KM";
+    var elite = Model.IsElite ? "Sim" : "Não";
+    var sexo = Model.Sexo.Equals("M") ? "Masculino" : "Feminino";
+}
+
+<link rel="icon" type="imagem/png" href="~/img/icone.ico" />
+
+<style>
+    div {
+        font-family: arial, sans-serif;
+        font-size: 30px;
+    }
+
+    td {
+        padding: 15px;
+    }
+
+    table {
+        border: 1px solid gray;
+        width: 100%;
+        font-family: arial, sans-serif;
+        font-size: 25px;
+    }
+
+    #tdNumero {
+        border-bottom: solid 1px gray;
+    }
+
+    span {
+        font-family: arial, sans-serif;
+        color: black;
+        font-size: 80px;
+    }
+
+    .bordar-direita {
+        width: 50%;
+        border-right: solid 1px gray;
+    }
+
+    .prova {
+        border-top: solid 1px gray;
+        border-bottom: solid 1px gray;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .camiseta {
+        border-top: solid 1px gray;
+        text-align: left;
+    }
+
+    a {
+        text-decoration: none;
+        font-family: arial, sans-serif;
+        color: blue;
+    }
+</style>
+@**@
+<div id="setPrint">
+    <div>
+        <b> @Model.Nome</b>, este é seu comprovante de matrícula para a  <b>Corrida Outubro Rosa de Alto Horizonte</b>, use-o para tirar seu Kit Corrida, o local é no ESF 1, nos dias 25 e 26 de Outubro das 7h às 17h, somente o participante poderá retirar seu Kit, leve sua ficha de matrícula e 1Kg de alimento não perecível <small>(exceto: sal, fubá, farinha em geral)</small>.
+    </div>
+    <BR />
+
+    <table>
+        <tr>
+            <td id="tdNumero" colspan="2">
+                <span><b>N°</b> @Model.Numero</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="bordar-direita"> <b> NOME:</b> @Model.Nome </td>
+            <td style="width:50%"> <b>  CPF:</b> @Model.CPF </td>
+        </tr>
+        <tr>
+            <td class="bordar-direita"> <b> ENDEREÇO COMPLETO: </b> @Model.Endereco</td>
+            <td style="width:50%"> <b> EMAIL:</b> @Model.Email</td>
+        </tr>
+        <tr>
+            <td class="bordar-direita"> <b> TELEFONE:</b> @Model.Telefone</td>
+            <td style="width:50%"> <b> CIDADE:</b> @Model.Cidade </td>
+        </tr>
+        <tr>
+            <td class="bordar-direita"> <b> DATA NASCIMENTO:</b> @Model.DataNasc</td>
+            <td style="width:50%"> <b> SEXO:</b> @sexo</td>
+        </tr>
+        <tr>
+            <th class="prova" colspan="2" style="text-align:center">INFORMAÇÕES DA CORRIDA</th>
+        </tr>
+
+        <tr>
+            <td class="bordar-direita"> <b> TIPO DE PROVA:</b> @tipo </td>
+            <td style="width:50%"> <b> ELITE?</b> @elite</td>
+        </tr>
+        <tr>
+            <td class="camiseta" colspan="2"> <b> TAMAHO CAMISETA? </b> @Model.Camiseta</td>
+        </tr>
+    </table>
+    <br>
+
+</div>
+
+
+
+<script src="~/vendor/jquery/jquery.js"></script>
+<script src="~/js/printThis.js"></script>
+
+
+<script type="text/javascript">
+
+    $("#setPrint").printThis({
+        copyTagClasses: true,
+        importStyle: true,
+        printDelay: 800
+    });
+
+</script>

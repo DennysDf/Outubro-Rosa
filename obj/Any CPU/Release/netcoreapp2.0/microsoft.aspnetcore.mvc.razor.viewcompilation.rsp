@@ -1,0 +1,16 @@
+C:\Users\Dennys\source\repos\outubroRosa\outubroRosa
+--output-path=obj\Any CPU\Release\netcoreapp2.0\
+--application-name=outubroRosa
+--content-root=C:\Users\Dennys\source\repos\outubroRosa\outubroRosa
+--file=C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\Views\Home\Imprimir.cshtml
+--file=C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\Views\Home\Index.cshtml
+--file=C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\Views\Home\Info.cshtml
+--file=C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\Views\Home\Informacoes.cshtml
+--file=C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\Views\Home\Outubro.cshtml
+--file=C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\Views\Relatorio\Ajax.cshtml
+--file=C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\Views\Relatorio\Index.cshtml
+--file=C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\Views\Shared\_Layout.cshtml
+--file=C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\Views\Shared\_LayoutOutubro.cshtml
+--file=C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\Views\_ViewImports.cshtml
+--file=C:\Users\Dennys\source\repos\outubroRosa\outubroRosa\Views\_ViewStart.cshtml

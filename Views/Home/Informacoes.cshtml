@@ -1,0 +1,57 @@
+﻿
+@model outubroRosa.Models.Entidades.Participante
+
+@{
+
+    Layout = null;
+}
+
+<link rel="icon" type="imagem/png" href="~/img/icone.ico" />
+
+
+
+<div class=" modal-corpo">
+    <div class="row ">
+        <div class="col-12">
+            <b class="nome-modal"> </b>, abaixo estão suas informações referente a sua matrícula realizada em <span class="data-hora"></span>, caso queira <b class="text-danger">CANCELAR SUA MATRÍCULA</b> <a href="@Url.Action("Cancelar")">CLIQUE AQUI</a>, mas caso queira <b class="font-weight-bold text-success"> REENVIAR O E-MAIL</b> com a confirmação de matrícula <a href="@Url.Action("EmailSend")">CLIQUE AQUI</a>.  <br />
+            <small class="font-weight-bold">Após cancelar a matrícula será possivel realizar um novo cadastro usando o mesmo CPF.</small>
+        </div>
+    </div>
+</div>
+<table class="table-modal">
+    <tr>
+        <td id="tdNumero" class="table-td" colspan="2">
+            <span class="numero"><b>N°</b>  <span class="numero-modal"></span> </span>
+        </td>
+    </tr>
+    <tr>
+        <td class="bordar-direita table-td"> <b> NOME:</b><span class="nome-modal"></span>  </td>
+        <td style="width:50%"> <b>  CPF:</b> <span class="CPF-modal"></span> </td>
+    </tr>
+    <tr>
+        <td class="bordar-direita table-td"> <b> ENDEREÇO COMPLETO: </b> <span class="endereco-modal"></span> </td>
+        <td  class="table-td" style="width:50%"> <b> EMAIL:</b> <span class="email-modal"></span></td>
+    </tr>
+    <tr>
+        <td class="bordar-direita table-td"> <b> TELEFONE:</b> <span class="telefone-modal"></span></td>
+        <td class="table-td"  style="width:50%"> <b> CIDADE:</b> <span class="cidade-modal"></span> </td>
+    </tr>
+    <tr>
+        <td class="bordar-direita table-td"> <b> DATA NASCIMENTO:</b><span class="data-modal"></span></td>
+        <td class="table-td"  style="width:50%"> <b> SEXO:</b> <span class="sexo-modal"></span></td>
+    </tr>
+    <tr>
+        <th class="prova" colspan="2" style="text-align:center">INFORMAÇÕES DA CORRIDA</th>
+    </tr>
+
+    <tr>
+        <td class="bordar-direita table-td"> <b> TIPO DE PROVA:</b> <span class="tipo-modal"></span> </td>
+        <td style="width:50%"> <b> ELITE?</b><span class="elite-modal"></span></td>
+    </tr>
+    <tr>
+        <td class="camiseta table-td" colspan="2"> <b> TAMAHO CAMISETA? </b> <span class="camiseta-modal"></span> </td>
+    </tr>
+</table>
+
+
+

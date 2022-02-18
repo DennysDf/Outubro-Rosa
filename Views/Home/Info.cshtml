@@ -1,0 +1,106 @@
+﻿
+@model outubroRosa.Models.Entidades.Participante
+
+@{
+    var tipo = Model.TipoProva.Equals("1") ? "Corrida - 5KM" : "Caminhada - 3KM";
+    var elite = Model.IsElite ? "Sim" : "Não";
+    var sexo = Model.Sexo.Equals("M") ? "Masculino" : "Feminino";
+    Layout = null;
+}
+
+<link rel="icon" type="imagem/png" href="~/img/icone.ico" />
+<style>
+
+    small {
+        font-family: arial, sans-serif;
+    }
+
+    div.modal-corpo {
+        font-size: 11pt;
+    }
+
+    .table-td {
+        padding: 6px;
+    }
+
+    .table-modal {
+        border: 1px solid gray;
+        width: 100%;
+        font-family: arial, sans-serif;
+        font-size: 16px;
+    }
+
+    #tdNumero {
+        border-bottom: solid 1px gray;
+    }
+
+    span.numero {
+        font-family: arial, sans-serif;
+        color: black;
+        font-size: 30px;
+    }
+
+    .bordar-direita {
+        width: 50%;
+        border-right: solid 1px gray;
+    }
+
+    .prova {
+        border-top: solid 1px gray;
+        border-bottom: solid 1px gray;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .camiseta {
+        border-top: solid 1px gray;
+        text-align: left;
+    }
+</style>
+
+
+<div class=" modal-corpo">
+    <div class="row ">
+        <div class="col-12">
+            <b> @Model.Nome</b>, abaixo estão suas informações referente a sua matrícula realizada em @Model.DataCad.ToShortDateString().ToDateFull() às @Model.DataCad.AddHours(1).ToShortTimeString(), caso queira <b class="text-danger">CANCELAR SUA MATRÍCULA</b> <a href="@Url.Action("Cancelar", new { id = Model.Id})">CLIQUE AQUI</a>, mas caso queira <b class="font-weight-bold text-success"> REENVIAR O E-MAIL</b> com a confirmação de matrícula <a href="@Url.Action("EmailSend", new { id = Model.Id})">CLIQUE AQUI</a>.  <br />
+            <small class="font-weight-bold">Após cancelar a matrícula será possivel realizar um novo cadastro usando o mesmo CPF.</small>
+        </div>
+    </div>
+</div>
+<table class="table-modal">
+    <tr>
+        <td id="tdNumero" class="table-td" colspan="2">
+            <span class="numero"><b>N°</b> @Model.Numero</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="bordar-direita table-td"> <b> NOME:</b> @Model.Nome </td>
+        <td style="width:50%"> <b>  CPF:</b> @Model.CPF </td>
+    </tr>
+    <tr>
+        <td class="bordar-direita table-td"> <b> ENDEREÇO COMPLETO: </b> @Model.Endereco</td>
+        <td class="table-td" style="width:50%"> <b> EMAIL:</b> @Model.Email</td>
+    </tr>
+    <tr>
+        <td class="bordar-direita table-td"> <b> TELEFONE:</b> @Model.Telefone</td>
+        <td class="table-td" style="width:50%"> <b> CIDADE:</b> @Model.Cidade </td>
+    </tr>
+    <tr>
+        <td class="bordar-direita table-td"> <b> DATA NASCIMENTO:</b> @Model.DataNasc</td>
+        <td class="table-td" style="width:50%"> <b> SEXO:</b> @sexo</td>
+    </tr>
+    <tr>
+        <th class="prova" colspan="2" style="text-align:center">INFORMAÇÕES DA CORRIDA</th>
+    </tr>
+
+    <tr>
+        <td class="bordar-direita table-td"> <b> TIPO DE PROVA:</b> @tipo </td>
+        <td style="width:50%"> <b> ELITE?</b> @elite</td>
+    </tr>
+    <tr>
+        <td class="camiseta table-td" colspan="2"> <b> TAMAHO CAMISETA? </b> @Model.Camiseta</td>
+    </tr>
+</table>
+
+
+

@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Realize seu cadastro e venha participar da 1º corrida e caminhada do Outubro Rosa de Alto Horizonte. O evento acontecerá no dia 27 de Outubro no Clube Municipal de Alto Horizonte, a partir das 6 horas da manhã. Todos os participantes receberão o Kit Corrida, composto de Camiseta, mochila, garrafa. Os atletas que participarem da corrida de 5KM no modo Elite estarão concorrendo à premios em dinheiro. ">
+    <meta name="author" content="Dennys Fonseca de Souza">
+    <meta name="keywords" content="Alto Horizonte, Outubro, Outubro Rosa, Corrida de Outubro Rosa, Corrida em Alto Horizonte" />
+    <meta name="robots" content="index, nofollow" />
+    <title>Corrida Outubro Rosa de Alto Horizonte</title>
+
+    <link rel="icon" type="imagem/png" href="~/img/icone.ico" />
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    
+    <meta property=og:title content="Corrida Outubro Rosa de Alto Horizonte">
+    <meta property=og:url content="https://www.devroyale.com/outubro-rosa">
+    <meta property=og:locale content=pt_BR>
+    <meta property=og:image itemprop="image" content="https://www.devroyale.com/img/icone.jpeg">
+    <meta property=og:image:type content="image/jpeg">
+    <meta property=og:image:width content=800>
+    <meta property=og:image:height content=600>
+    <meta property=og:type content=article>
+
+
+    <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link href="~/css/css.min.css" rel="stylesheet" asp-append-version="true">
+
+    <style type="">
+        .opa {
+            opacity: 0.0;
+        }
+
+        .size-menu {
+            font-size: 15pt;
+        }
+
+
+        @@media screen and (min-width: 800px) {
+            #alerta {
+                float: right;
+                position: absolute;
+                bottom: 68px;
+                left: 185px;
+                width: 100%;
+            }
+        }
+
+
+        @@media screen and (max-width: 600px) {
+            header.masthead {
+                margin-top: 60px;
+                margin-left: 1px;
+                height: 230px;
+                width: 100%;
+            }
+
+
+
+            .opa2 {
+                display: none;
+            }
+        }
+    </style>
+
+    <style>
+
+        .field-validation-error {
+            color: red;
+        }
+
+        ul.social-buttons #whatsapphover a:hover {
+            background-color: green;
+        }
+
+        ul.social-buttons #instagram a:hover {
+            background: #f09433;
+            background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1);
+        }
+
+        ul.social-buttons #facebookhover a:hover {
+            background-color: #4267B2;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    @RenderBody()
+
+
+    <footer class="p-0">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <span class="copyright">Desenvolvido por Dennys Fonseca de Souza - 2019</span>
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item " id="whatsapphover">
+                            <a target="_blank" href="https://api.whatsapp.com/send?phone=5562981479264">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item" id="facebookhover">
+                            <a target="_blank" href="https://www.facebook.com/dennys.fonseca.52">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item" id="instagram">
+                            <a target="_blank" href="https://instagram.com/dennysfonseca_?igshid=1fsvro7n57uji">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/js/agency.min.js"></script>
+    <script src="~/vendor/mask/jquery.mask.min.js"></script>
+
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

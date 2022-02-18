@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    
+}
+
+
+
+@ViewBag.Ids
+
+
+
+<div class="container ">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <img src="~/img/pagina_em_construcao.gif" alt="" />
+        </div>
+    </div>
+</div>
+
+Entre em contato com o Adm do Site para mais informações.
+
+<a href="https://api.whatsapp.com/send?l=pt&amp;phone=5562981479264"><img src="https://i0.wp.com/redballoon.com.br/wp-content/uploads/2016/06/whatsapp-logo-icone.png" style="height:80px; position:fixed; bottom: 25px; left: 25px; z-index:100;" data-selector="img"></a>
+
+<script src="~/vendor/jquery/jquery.js"></script>
+<script>
+        @*var ids = JSON.parse('@Html.Raw(ViewBag.Ids)');
+
+
+        function Index(I) {
+            console.log(ids[I].Id)
+        }
+
+
+
+        $.each(ids, function (i, e) {
+            setTimeout(function () { Index(i) }, 2000)
+        })*@
+
+
+    @*var ids = JSON.parse('@Html.Raw(ViewBag.Ids)');
+
+    var i = 0, howManyTimes = ids.length;
+
+    console.log(howManyTimes)
+
+
+    function f() {
+        $.post('@Url.Action("sadasd")', { id: ids[i].Id }, function (response) {
+
+            console.log(ids[i].Id);
+            console.log(response);
+            i++;
+
+            if (i < howManyTimes) {
+                setTimeout(f, 6000);
+            }
+        })
+
+
+    }
+
+    f();*@
+
+
+</script>

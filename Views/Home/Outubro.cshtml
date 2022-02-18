@@ -1,0 +1,921 @@
+﻿
+@model outubroRosa.Models.Home.ParticiparVM
+
+@{
+    Layout = "_LayoutOutubro";
+}
+<style>
+
+    small {
+        font-family: arial, sans-serif;
+    }
+
+    div.modal-corpo {
+        font-size: 11pt;
+    }
+
+    .table-td {
+        padding: 6px;
+    }
+
+    .table-modal {
+        border: 1px solid gray;
+        width: 100%;
+        font-family: arial, sans-serif;
+        font-size: 16px;
+    }
+
+    #tdNumero {
+        border-bottom: solid 1px gray;
+    }
+
+    span.numero {
+        font-family: arial, sans-serif;
+        color: black;
+        font-size: 30px;
+    }
+
+    .bordar-direita {
+        width: 50%;
+        border-right: solid 1px gray;
+    }
+
+    .prova {
+        border-top: solid 1px gray;
+        border-bottom: solid 1px gray;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .camiseta {
+        border-top: solid 1px gray;
+        text-align: left;
+    }
+</style>
+
+<style>
+
+    .focus:focus {
+        outline: none !important;
+        box-shadow: 0 0 15px #4285F4 !important;
+    }
+
+    button[disabled] {
+        background-color: #FEC810 !important;
+    }
+
+    ::selection {
+        background: #4285F4;
+        color: #ffffff;
+    }
+
+    input[type=radio] {
+        height: 30px;
+        width: 30px;
+        vertical-align: middle;
+    }
+
+    input[type=checkbox] {
+        height: 20px;
+        width: 20px;
+        vertical-align: middle;
+    }
+
+    label.bottom {
+        width: 300px;
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container ">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Outubro Rosa</a>
+        <button class="navbar-toggler navbar-toggler-right btn btn-dark" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+                <li class="nav-item size-menu">
+                    <a class="nav-link js-scroll-trigger texto-preto font-weight-bold" href="#services">SOBRE o evento</a>
+                </li>
+                <li class="nav-item size-menu">
+                    <a class="nav-link js-scroll-trigger texto-preto font-weight-bold" href="#about">CRONOGRAMA</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#portfolio">About</a>
+                </li> -->
+                <li class="nav-item size-menu">
+                    <a class="nav-link js-scroll-trigger texto-preto font-weight-bold" href="#portfolio">Eventos</a>
+                </li>
+                <li class="nav-item size-menu">
+                    <a class="nav-link js-scroll-trigger texto-preto font-weight-bold" href="#contact">Participar</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<header class="masthead">
+    <div class="container">
+        <div class="intro-text ">
+            <div class="intro-lead-in opa">Corrida do outubro Rosa de Alto Horizonte - GO.</div>
+            <div class="intro-lead-in opa opa2">Corrida do outubro Rosa de Alto Horizonte - GO.</div>
+            <div class="intro-heading text-uppercase opa ">em favor à vida.</div>
+            <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+            @*<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger " href="#contact">PARTICIPAR</a>*@
+
+        </div>
+    </div>
+</header>
+
+
+<section id="services" style="margin-top:140px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="section-heading text-uppercase">SOBRE O EVENTO </h2>
+                <h3 class="section-subheading text-muted"></h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-6">
+                <!-- <span class="fa-stack fa-4x">
+                  <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                  <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                </span> -->
+                <h4 class="service-heading">História</h4>
+                <p class="text-muted">
+                    O outubro rosa é uma campanha de conscientização realizada por diversos entidades no mês de outubro dirigida à sociedade e às mulheres sobre a importância da prevenção e do diagnóstico precoce do câncer de mama. <br>
+
+                    O movimento <b>Corrida Rosa</b> surgiu em 1990, na primeira Corrida pela cura, realizada em Nova York, pela fundação Susan G. Komen for the Cure, sendo promovida anualmente em diversas cidades com o objetivo de fomentar e comemorar ações voltadas a prevenção do câncer de mama. O nome remete à cor do laço rosa que simboliza e sensibiliza a população mundialmente na luta contra o câncer de mama e estimula a participação da população, empresas e entidades. <br>
+
+                    Com o intuito de promover a conscientização a prática da melhora da qualidade de vida a Secretária Municipal de Saúde, Prefeitura Municipal de Alto Horizonte e a Câmara Municipal de Vereadores juntamente com lundin mining e Desafio Fitness Academia e demais parceiros vem realizar este evento a <b>Corrida Outubro Rosa</b>.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <!-- <span class="fa-stack fa-4x">
+                  <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                  <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                </span> -->
+                <h4 class="service-heading">Local e Data</h4>
+                <p class="text-muted">
+                    A Corrida Outubro Rosa será realizada no dia 27 de Outubro de 2019, com largada e chegada no
+
+                    <a href="https://www.google.com/maps/place/Clube+Municipal+de+Alto+Horizonte/@@-14.2005004,-49.3420247,17z/data=!4m12!1m6!3m5!1s0x9343b56c779178a9:0x99bb1b22b6b7468e!2sClube+Municipal+de+Alto+Horizonte!8m2!3d-14.2005056!4d-49.339836!3m4!1s0x9343b56c779178a9:0x99bb1b22b6b7468e!8m2!3d-14.2005056!4d-49.339836" target="_blank">Clube Municipal de Alto Horizonte.</a>
+                    <br>
+                </p>
+
+                <h4 class="service-heading">Categorias</h4>
+                <p class="text-muted">
+                    Os participantes podem escolher uma categoria: <b> caminhada 3KM ou corrida 5KM<small>(Elite/Amador)</small>.  </b> <br>
+                    Para efeito de classificação na corrida e premiação na categoria 5KM, serão premiados os campeões gerais da prova elite/amador e pelo gênero. Na categoria 3KM só haverá a entrega de medalhas e brindes.
+                </p>
+            </div>
+            <div class="col-md-4 d-none">
+                <!-- <span class="fa-stack fa-4x">
+                  <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                  <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                </span> -->
+                <h4 class="service-heading">Web Security</h4>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="about">
+    <div class="container-fuild">
+        <div class="row ">
+            <div class="col-md-6 text-center">
+                <h2 class="section-heading text-uppercase">CRONOGRAMA</h2>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image">
+                            <br> 6:00 hrs
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">6:00 horas</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Concentração.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <br>
+                            6:10 hrs
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>6:10 horas</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Café da manhã.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image">
+                            <br> 6:40 hrs.
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>6:40 horas</h4>
+
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Aquecimento e ultimas explicações da prova.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <br>
+                            7:00 hrs
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>7:00 horas</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Largada corrida: pelotão de elite.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image">
+                            <br>
+                            7:05 hrs
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>7:05 horas</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Largada corrida: pelotão de geral.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <br> 7:10 hrs.
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>7:10 horas</h4>
+
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Largada da caminhada.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="">
+                        <div class="timeline-image">
+                            <br> 9:00 hrs.
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>9:00 horas</h4>
+
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Premiação aos competidores.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <h2 class="section-heading text-uppercase">PERCURSO</h2>
+                <div class="form-group">
+                    <img src="~/img/outubro/Corrida.png" width="100%" />
+                </div>
+                <div class="form-group mt-5">
+                    <img src="~/img/outubro/Caminhada Square.png" width="100%" />
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="bg-light" id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">EVENTOS NO DIA DA CORRIDA</h2>
+                <h3 class="section-subheading text-muted"></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="">
+                    <div class="">
+
+                    </div>
+                </div>
+                <img class="img-fluid" src="~/img/outubro/kit-corrida.jpeg">
+
+                <div class="portfolio-caption">
+                    <h4>Kit Corrida</h4>
+                    <p class="text-muted">Kit corrida: camiseta, mochila, garrafa e Nº de peito para todos participantes inscritos no evento, somente os atletas da categoria corrida receberão o chip de conometragem. Para retirar o Kit Corrida será necessário 1kg de alimento não perecível que será destinado em forma de cestas para famílias carentes. Os kit serão entregues no dia 26 de Outubro no no ESF 1 a partir das 15h.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="">
+                    <div class="">
+
+                    </div>
+                </div>
+                <img class="img-fluid" src="~/img/outubro/corrida 1.jpg">
+
+                <div class="portfolio-caption">
+                    <h4>Caminhada 3KM</h4>
+                    <p class="text-muted">Caminhada com largada e chegada no Clube Municipal de Alto Horizonte. Com brinde para 1º, 2º e 3º lugar masculino e feminino.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+
+                <img class="img-fluid" src="~/img/outubro/corrida.jpg" alt="">
+
+                <div class="portfolio-caption">
+                    <h4>Corrida 5KM</h4>
+                    <p class="text-muted">Corrida com largada e chegada no Clube Municipal de Alto Horizonte. Categorias elite e amador com premiação para 1º, 2º e 3º lugar em dinheiro masculino e feminino classificação geral. Categoria amador premiação para o 1º lugar de cada faixa etária.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+
+
+                <img class="img-fluid" src="~/img/outubro/Alongamento3.jpg" alt="">
+
+                <div class="portfolio-caption">
+                    <h4>Concentração</h4>
+
+                    <p class="text-muted"> <small>(Pré prova)</small> </p>
+                    <p class="text-muted">Espaço direcionado para aquecimento, concentração e preparação dos atletas.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+
+
+                <img class="img-fluid" src="~/img/outubro/criancas.jpg" alt="">
+
+                <div class="portfolio-caption">
+                    <h4>Espaço Kids</h4>
+                    <p class="text-muted">Os participantes podem deixar suas crianças no Espaço Kids enquanto realizam a prova.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+
+                <div class="">
+                    <div class="">
+
+                    </div>
+                </div>
+                <img class="img-fluid" src="~/img/outubro/canto-do-atleta.png" alt="">
+
+                <div class="portfolio-caption">
+                    <h4>Cantinho do Atleta </h4>
+                    <p class="text-muted"> <small> (Pós Prova) </small></p>
+                    <p class="text-muted">Presença de educador fisico, fisioterapeutas para acompanhar os candidatos que realizarão a corrida e caminhada.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@*<!-- Team -->
+    <!-- <section class="bg-light" id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
+              <h4>Kay Garland</h4>
+              <p class="text-muted">Lead Designer</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
+              <h4>Larry Parker</h4>
+              <p class="text-muted">Lead Marketer</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
+              <h4>Diana Pertersen</h4>
+              <p class="text-muted">Lead Developer</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- Clients -->*@
+
+
+
+<div class="container-fluid ">
+    <div class="row pt-2 justify-content-center">
+        <div class="col-md-2 col-sm-6">
+
+            <img class="img-fluid d-block mx-auto" src="~/img/outubro/pref-ah.png" width="400" height="110" alt="">
+
+        </div>
+        <div class="col-md-2 col-sm-6">
+
+            <img class="img-fluid d-block mx-auto" src="~/img/outubro/saude-ah.jpg" width="400" height="110" alt="">
+
+        </div>
+        <div class="col-md-2 col-sm-6">
+
+            <img class="img-fluid d-block mx-auto pt-5" src="~/img/outubro/LUNDIN.png" width="400" height="110" alt="">
+
+        </div>
+        <div class="col-md-2 col-sm-6">
+
+            <img class="img-fluid d-block mx-auto" src="~/img/outubro/camara.jpg" width="110" height="110" alt="">
+
+        </div>
+        <div class="col-md-2 col-sm-6">
+
+            <img class="img-fluid d-block mx-auto" src="~/img/outubro/desafio.png" width="400" height="110" alt="">
+
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-12">
+            <b>Organização</b> <br />
+            <b> Cláudia Paz</b> (62) 9 8118-7738 - <b>Daniela Lago</b> (62) 9 8223-8318 - <b> Keythyene Cardoso</b> (62) 9 8283-3023
+
+        </div>
+
+    </div>
+    <div id="Tempo"></div>
+</div>
+
+
+
+
+<section id="contact">
+    <div class="container">
+        @*@if (DateTime.Now >= DateTime.Parse("9/28/2019 11:59:59"))*@
+
+        @if (true)
+        {
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">QUERO PARTICIPAR</h2>
+                <h3 class="section-subheading text-muted">Formulário para participar</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <form asp-action="Cadastrar" id="Form">
+                    <div class="row">
+                        <div class="col-12 text-center  text-white-50">
+                            Informações do Participante
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control focus" asp-for="Nome" type="text" placeholder="Nome completo *">
+                                <span asp-validation-for="Nome"></span>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control focus" asp-for="Endereco" type="text" placeholder="Endereço completo *">
+                                <span asp-validation-for="Endereco"></span>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control focus" asp-for="Telefone" type="text" placeholder="Telefone celular *">
+                                <span asp-validation-for="Telefone"></span>
+                            </div>
+                            <div class="form-group text-white">
+                                <input class="form-control focus" asp-for="DataNasc" type="text" placeholder="Data de Nascimento *">
+                                <span asp-validation-for="DataNasc"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control focus" type="text" asp-for="CPF" placeholder="CPF *">
+                                <span style="color:red;" id="isExist"></span>
+                                <span asp-validation-for="CPF"></span>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control focus" asp-for="Email" type="text" placeholder="Seu e-mail *">
+                                <span asp-validation-for="Email"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input class="form-control focus" asp-for="Cidade" type="text" placeholder="Cidade *">
+                                <span asp-validation-for="Cidade"></span>
+                            </div>
+
+                            <div class="form-group text-white">
+                                <label asp-for="Sexo" id="M" class="bottom"><input asp-for="Sexo" type="radio" value="M" /> Masculino</label>
+                                <label asp-for="Sexo" id="F" class="bottom"><input asp-for="Sexo" type="radio" value="F" /> Feminino</label>
+
+                                <div class="form-group">
+                                    <span asp-validation-for="Sexo"></span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-12 text-center text-white-50">
+                            Informações da prova
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group text-white">
+                                <label class="bottom "><input asp-for="TipoProva" id="1" class="prova" type="radio" value="1" /> Corrida - 5KM</label>
+                                <div class="mostrar d-none" id="alerta">
+                                    <label class="text-white">
+                                        <input type="checkbox" asp-for="IsElite" /> <span class="font-weight-bold">Deseja fazer parte do grupo de elite? </span>
+                                    </label>
+                                    <i class="fa fa-info-circle" style="cursor:pointer;" data-toggle="tooltip" title="A categoria elite é recomendada para atletas que praticam treinamento especifico para corrida."></i>
+                                </div>
+                                <label class="bottom"><input class="prova" type="radio" asp-for="TipoProva" id="2" value="2" /> Caminhada - 3KM</label>
+                                <div class="form-group"><span asp-validation-for="TipoProva"></span></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group text-white text-center">
+                                <span class=""> Camiseta</span><br />
+                                <label><input asp-for="Camiseta" type="radio" id="p" value="P" /> P</label>
+                                <label><input asp-for="Camiseta" type="radio" id="m" value="M" /> M</label>
+                                <label><input asp-for="Camiseta" type="radio" id="g" value="G" /> G</label>
+                                <label><input asp-for="Camiseta" type="radio" id="gg" value="GG" /> GG</label>
+
+                                <div class="form-group">
+                                    <span asp-validation-for="Camiseta"></span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <div id="success"></div>
+                        <button style="border: 1px solid #FEC810;" class="btn btn-primary btn-xl text-uppercase" id="enviar" type="submit"> <i class="" id="icon"></i> CADASTRAR</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+}
+else
+{
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <div class="intro-lead-in text-white" style="font-size:30pt">LIMITE DE PARTICIPANTES ATINGIDO.</div>
+            <h4 class="text-white">INSCRIÇÕES ENCERRADAS.</h4>
+        </div>
+    </div>
+
+
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+    <div class="intro-heading text-uppercase opa opa2">em favor à vida.</div>
+
+
+}
+    </div>
+
+</section>
+
+@if (TempData["Feito"] != null)
+{
+    <div class="modal fade" id="confirme" role="dialog" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h3 class="modal-title mt-0 text-white" id="exampleModalLabel"></h3>
+                    <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4>Parabéns, você está inscrito(a) para a Corrida Outubro Rosa de Alto Horizonte. Verifique sua caixa e-mail para confirmar os dados informados no cadastro e seu número de inscrição. Boa prova!</h4>
+                    <h4>Nº @TempData["Feito"]</h4>
+                    <h6>Este é o seu número de identificação na prova e com ele você irá receber seu Kit Corrida.</h6>
+                    <h6 class="text-danger">Caso você não receba o e-mail, vá até o campo CPF, na área de matricula, preencha com o CPF cadastrado e siga os passos.</h6>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+<div class="modal fade" id="teste2" role="dialog" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark">
+                <h3 class="modal-title mt-0 text-white" id="exampleModalLabel"></h3>
+                <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="bodyCPFs">
+
+
+                <div class=" modal-corpo">
+                    <div class="row ">
+                        <div class="col-12">
+                            <b class="nome-modal"> </b>, abaixo estão suas informações referente a sua matrícula, caso queira <b class="text-danger">CANCELAR SUA MATRÍCULA</b> <span class="cancelar-modal-link"></span>, mas caso queira <b class="font-weight-bold text-success"> REENVIAR O E-MAIL</b> <span class="email-modal-link"></span>.  <br />
+                            <small class="font-weight-bold">Após cancelar a matrícula será possivel realizar um novo cadastro usando o mesmo CPF.</small>
+                        </div>
+                    </div>
+                </div>
+                <table class="table-modal">
+                    <tr>
+                        <td id="tdNumero" class="table-td" colspan="2">
+                            <span class="numero"><b>N°</b>  <span class="numero-modal"></span> </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bordar-direita table-td"> <b> NOME:</b><span class="nome-modal"></span>  </td>
+                        <td style="width:50%"> <b>  CPF:</b> <span class="CPF-modal"></span> </td>
+                    </tr>
+                    <tr>
+                        <td class="bordar-direita table-td"> <b> ENDEREÇO COMPLETO: </b> <span class="endereco-modal"></span> </td>
+                        <td class="table-td" style="width:50%"> <b> EMAIL:</b> <span class="email-modal"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="bordar-direita table-td"> <b> TELEFONE:</b> <span class="telefone-modal"></span></td>
+                        <td class="table-td" style="width:50%"> <b> CIDADE:</b> <span class="cidade-modal"></span> </td>
+                    </tr>
+                    <tr>
+                        <td class="bordar-direita table-td"> <b> DATA NASCIMENTO:</b><span class="data-modal"></span></td>
+                        <td class="table-td" style="width:50%"> <b> SEXO:</b> <span class="sexo-modal"></span></td>
+                    </tr>
+                    <tr>
+                        <th class="prova" colspan="2" style="text-align:center">INFORMAÇÕES DA CORRIDA</th>
+                    </tr>
+
+                    <tr>
+                        <td class="bordar-direita table-td"> <b> TIPO DE PROVA:</b> <span class="tipo-modal"></span> </td>
+                        <td style="width:50%"> <b> ELITE?</b> <span class="elite-modal"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="camiseta table-td" colspan="2"> <b> TAMAHO CAMISETA? </b> <span class="camiseta-modal"></span> </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@if (TempData["Email"] != null)
+{
+    <div class="modal fade" id="teste" role="dialog" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h3 class="modal-title mt-0 text-white" id="exampleModalLabel"></h3>
+                    <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    E-mail reenviado com sucesso. Caso não consiga encontra-lo na caixa de e-mail verifique Na seção se Spam ou Lixo Eletrônico. <br>Se o problema persistir por favor <a href='https://devroyale.com/Cancelar?id=@TempData["Email"]'>  cancele sua matricula</a> e cadastre-se novamente.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+@if (Servicos.Notificacoes.Count > 0)
+{
+    <div class="modal fade" id="teste" role="dialog" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h3 class="modal-title mt-0 text-white" id="exampleModalLabel"></h3>
+                    <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="bodyCPF">
+                    Sua matrícula foi cancelada com sucesso, esperamos que você refaça sua matrícula novamente até o dia do evento, sua presença é extremamento importante. Obrigado.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    Servicos.Notificacoes.Clear();
+}
+@section Scripts{
+
+<script type="text/javascript">
+
+    $('#teste').modal('show');
+    $("#confirme").modal("show")
+    $("#modal-email").modal("show")
+
+
+    $("#enviar").click(function () {
+        $("#Form").submit();
+        var erros = $("body").find(".field-validation-error");
+        if (erros.length == 0) {
+            $(this).attr("disabled", true)
+            $("input").attr("readonly", true);
+            $("#icon").addClass("fa fa-spinner fa-spin");
+        }
+    });
+
+
+
+    function verificaCPF() {
+        var cpf = $("#CPF").val()
+        if (cpf.length >= 12) {
+            $.get('@Url.Action("VerificaCPF")', { cpf }, function (response) {
+                if (response != 0) {
+                    $("#isExist").html("  CPF já cadastrado. <span id='openModal' style='color:#4285F4; cursor:pointer' data-id='" + response.Id + "' data-cpf='" + response.CPF + "' ' >Clique aqui para verificar sua matrícula. </span>")
+                    $("#enviar").attr("disabled", true)
+                    console.log(response)    
+                    $("#openModal").click(function () {
+                $(".numero-modal").text(response.Numero)
+                $(".nome-modal").text(response.Nome)
+                $(".CPF-modal").text(response.CPF)
+                $(".sexo-modal").text(response.Sexo)
+                $(".camiseta-modal").text(response.Camiseta)
+                $(".cidade-modal").text(response.Cidade)
+                $(".endereco-modal").text(response.Endereco)
+                $(".email-modal").text(response.Email)
+                var tipo = response.TipoProva == 1 ? "Corrida - 5KM" : "Caminhada - 3KM"
+                $(".tipo-modal").text(tipo),
+                $(".data-modal").text(response.DataNasc)
+                var elite = response.IsElite ? "Sim" : "Não"
+                $(".elite-modal").text(elite)
+                $(".telefone-modal").text(response.Telefone)
+                $(".cancelar-modal-link").html("<a href='https://devroyale.com/Cancelar?id=" + response.Id + "' >CLIQUE AQUI</a>")
+                $(".email-modal-link").html("<a href='https://devroyale.com/Home/EmailSend?id=" + response.Id + "' >CLIQUE AQUI</a>")
+                $("#teste2").modal("show")
+            })
+                }
+            },"json");
+        } else {
+            
+            $("#isExist").html("");
+            $("#enviar").removeAttr("disabled", true)
+        }
+    }
+
+
+
+    $("#CPF").keyup(function () {
+        $("#isExist").html("");
+        verificaCPF();
+    })
+
+    $("#CPF").focusin(function () {
+        $("#isExist").html("");
+        verificaCPF();
+    })
+
+    $("#CPF").focusout(function () {
+
+        setTimeout(function () {
+            $("#isExist").html("");
+            verificaCPF();
+        }, 100)
+
+    })
+
+    $("#CPF").change(function () {
+        verificaCPF();
+    })
+
+    $("#CPF").mask("000.000.000-00")
+
+    $("#Telefone").mask("(00) 0 0000-0000")
+
+    $("#DataNasc").mask("00/00/0000")
+    
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    $(".prova").change(function () {
+        if ($(this).val() == "1") {
+            $(".mostrar").removeClass("d-none");
+        } else {
+            $(".mostrar").addClass("d-none");
+
+        }
+    })
+
+
+    </script>
+
+}

@@ -1,0 +1,193 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    .size{
+        font-size:19px;
+    }
+
+    body{
+        font-family:sans-serif
+    }
+    table{
+        font-size:19px;
+    }
+
+    input[type=radio] {
+        height: 30px;
+        width: 30px;
+        vertical-align: middle;
+    }
+
+    input[type=checkbox] {
+        height: 20px;
+        width: 20px;
+        vertical-align: middle;
+    }
+</style>
+
+<head>
+    <title>
+        Relátorio
+    </title>
+</head>
+<h2>Participanes</h2>
+<body>
+    <div class="container-fluid">
+        <form action="#" id="form">
+            <div class="row  border">
+                <div class="col-12">
+                    <div class="row justify-content-center text-center pt-3">
+                        <div class="col-sm-3 col-6 pt-2 pt-sm-0">
+                            <label>
+                                <input type="checkbox" class="form-relatorio" checked name="Mulher" id="Mulher" /> Mulheres
+                            </label>
+                        </div>
+                        <div class="col-sm-3 col-6 pt-2 pt-sm-0">
+                            <label>
+                                <input type="checkbox" checked class="form-relatorio" name="Homem" id="Homem" /> Homens
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center text-center">
+                        <div class="col-sm-3 col-6 pt-2 pt-sm-0">
+                            <label>
+                                <input type="checkbox" checked class="form-relatorio" name="Caminhada" id="Caminhada" /> Caminhada - 3KM
+                            </label>
+                        </div>
+                        <div class="col-sm-3 col-6 pt-2 pt-sm-0">
+                            <label>
+                                <input type="checkbox" checked class="form-relatorio" name="Corrida" id="Corrida" /> Corrida - 5KM
+                            </label>
+                        </div>
+                        <div class="col-sm-3 col-6 pt-2 pt-sm-0">
+                            <label>
+                                <input type="checkbox" checked class="form-relatorio" name="IsElite" id="IsElite" /> Elite?
+                            </label>
+                        </div>
+                        <div class="col-sm-3 col-6 pt-2 pt-sm-0">
+                            <label>
+                                <input type="checkbox" checked class="form-relatorio" name="IsAmador" id="IsAmador" /> Amador?
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form><br />
+
+        <div class="row text-center">
+            <div class="col-12">
+                <h2>
+                    Outubro Rosa de Alto Horizonte
+                </h2>
+            </div>
+        </div>
+
+        <div class="row border size mb-3" >
+            <div class="col-sm-3 border-bottom">
+                <b>Participantes</b>: <br />
+                <span class="font-weight-bold">Masculino: </span><i id="man"></i> |
+                <span class="font-weight-bold">Feminino: </span> <i id="woman"></i>
+            </div>
+            <div class="col-sm-3 border-bottom">
+                <b>Camisetas</b>: <br />
+                <span class="font-weight-bold">P:</span><i id="tamP"></i> |
+                <span class="font-weight-bold">M:</span><i id="tamM"></i> |
+                <span class="font-weight-bold">G:</span><i id="tamG"></i> |
+                <span class="font-weight-bold">GG:</span><i id="tamGG"></i>
+            </div>
+            <div class="col-sm-5">
+                <b>Tipo Prova:</b> <br />
+                <span class="font-weight-bold">Corrida - 5KM:</span> <i id="cori"></i> |
+                <span class="font-weight-bold">Caminhada - 3KM:</span> <i id="cami"></i>
+            </div>
+        </div>
+
+        <div class="row justify-content-center table-hover table-responsive pb-5">
+            <div class="col-9 col-12">
+
+
+                <table class="table table-sm" id="tables">
+                    <thead class="thead-dark text-center">
+                        <tr>
+                            <th width="15">Nº</th>
+                            <th  width="15" class="text-left">Nome</th>
+                            <th width="15">Tipo Prova</th>
+                            <th  width="15">Dt. Nasc</th>
+                            <th width="60">CPF</th>
+                            <th  width="15">Sexo</th>
+                            <th  width="15" class="text-center">e-mail</th>                            
+                        </tr>
+                    </thead>
+                    <tbody class="text-center text-nowrap" id="body-table"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script type="text/javascript">
+
+    var a = $("#tables").DataTable();
+ 
+    $(".form-relatorio").change(function () {
+        Ajax()
+    })
+
+    Ajax()
+
+    function Ajax() {        
+        $.ajax({
+            type: "GET",
+            url:'@Url.Action("Ajax")' ,
+            data: $("#form").serialize(),
+            success: function (response) {
+                a.destroy();
+                $("#body-table").html(response)
+                indicadores()
+                $("#tr").remove();
+                a = $("#tables").DataTable({
+                    order: [],
+                    dom: 'Bfrtip',
+                    "order": [[1, "asc"]],
+                    "lengthMenu": [[-1], ["Todos"]],
+                    "language": {
+                        "url": "//cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json"
+                    },
+                    buttons: [
+                        'print'
+                    ]
+                    
+                });
+                
+            }
+        });
+    }
+
+    function indicadores() {
+
+        if (!($("#Homem").is(":checked"))) {
+            $("#woman").text($("#Masculino").text())
+            $("#man").text("0")
+        } else {
+            $("#man").text($("#Masculino").text())
+            $("#woman").text($("#Feminino").text())
+        }
+
+        if (($("#Corrida").is(":checked"))) {
+            $("#cami").text($("#Caminhada1").text())
+            $("#cori").text($("#Corrida1").text())
+        } else {
+            $("#cami").text($("#Corrida1").text())
+            $("#cori").text("0")
+        }
+        
+        $("#tamP").text($("#P").text())
+        $("#tamM").text($("#M").text())
+        $("#tamG").text($("#G").text())
+        $("#tamGG").text($("#GG").text())
+    }
+
+</script>

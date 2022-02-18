@@ -1,0 +1,53 @@
+﻿@model ICollection<outubroRosa.Models.Home.RelatorioVM>
+@{
+    Layout = null;
+    var Camisetas = ViewBag.Camiseta as int[];
+    var Tamanho = new string[] {"G", "GG", "M", "P" };
+
+    var Sexo = ViewBag.Sexo as int[];
+    var Genero = new string[] { "Masculino", "Feminino" };
+
+    var Prova = ViewBag.TipoProva as int[];
+    var Tipo = new string[] { "Corrida1", "Caminhada1" };
+
+}
+
+
+<tr class="d-none" id="tr">
+    @for (int i = 0; i < Camisetas.Length; i++)
+    {
+        <td id="@Tamanho[i]">
+            @Camisetas[i]
+        </td>
+    }
+
+
+    @for (int i = 0; i < Sexo.Length; i++)
+    {
+        <td id="@Genero[i]">
+            @Sexo[i]
+        </td>
+    }
+
+    @for (int i = 0; i < Prova.Length; i++)
+    {
+        <td id="@Tipo[i]">
+            @Prova[i]
+        </td>
+    }
+</tr>
+
+@foreach (var item in Model)
+{
+<tr>
+    <td class="text-left text-nowrap">@item.Num</td>
+    <td class="text-left text-nowrap">@item.Nome</td>    
+    <td>@item.TipoProva</td>
+    <td class="text-left text-nowrap"> @item.DataNasc</td>
+    <td>@item.CPF</td>
+    <td class="text-left text-nowrap">@item.Sexo</td>
+    <td class="text-left text-nowrap">@item.Email</td>
+</tr>
+
+}
+
